@@ -6,10 +6,10 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -17,6 +17,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <h1>Hi, my name is Sam Bain</h1>
     </header>
 
     <section id="about">
@@ -26,8 +27,42 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <p>Showcase your drones, PCBs, and other work here.</p>
+    
+        <div class="project">
+            <div class="project-overlay">
+                <h3>Hybrid Spray Aircraft</h3>
+                <p>Designed and built a hybrid quadcopter capable of carrying 10 litres of spray and 5 litres of fuel over a 40 minute flight time.</p>
+                <button class="explore-btn" onclick="openPopup('drone-popup')">Explore</button>
+            </div>
+            <img src="images/spray_drone_main.PNG" alt="Custom Drone Design">
+        </div>
+    
+        <div class="project">
+            <div class="project-overlay">
+                <h3>Smart Battery Charging Case</h3>
+                <p>Developed a charging/carry case for Aeronavics custom Li-Ion battery packs.</p>
+                <button class="explore-btn" onclick="openPopup('pcb-popup')">Explore</button>
+            </div>
+            <img src="images/battery_charging_case_main.png" alt="High-Speed PCB Design">
+        </div>
     </section>
+    
+    <!-- Pop-up Windows -->
+    <div id="drone-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('drone-popup')">&times;</span>
+            <h2>Custom Drone Design</h2>
+            <p>Full details about the drone project go here...</p>
+        </div>
+    </div>
+    
+    <div id="pcb-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('pcb-popup')">&times;</span>
+            <h2>High-Speed PCB Design</h2>
+            <p>Full details about the PCB project go here...</p>
+        </div>
+    </div>
 
     <section id="contact">
         <h2>Contact</h2>
