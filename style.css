@@ -20,6 +20,14 @@ section {
     text-align: left;
 }
 
+/* Ensure section headers are aligned */
+.section-title {
+    text-align: center; /* Aligns headers to the left */
+    width: 90%; /* Keeps consistent width */
+    max-width: 800px; /* Matches About Me width */
+    margin: 0 auto 20px auto; /* Centers with spacing below */
+}
+
 /* Center the footer */
 footer {
     width: 100%;
@@ -54,20 +62,29 @@ a:hover {
 }
 
 /* Project container */
-.project {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px;
+#projects {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: center; /* Centers projects */
+    gap: 20px; /* Adds space between items */
+    padding: 20px; /* Adds space around the section */
 }
 
-/* Project image */
+/* Individual project styling */
+.project {
+    position: relative;
+    flex: 1 1 calc(33.33333% - 20px); /* Flexible width with a minimum size */
+    max-width: 300px; /* Prevents projects from becoming too wide */
+    min-width: 240px;
+    overflow: hidden; /* Ensures overlays don’t spill out */
+    border-radius: 10px;
+}
+
+/* Ensure images fit properly */
 .project img {
-    width: 100%;
+    width: 100%; /* Makes sure images scale correctly */
+    height: 100% /* Keeps aspect ratio */
     display: block;
-    transition: transform 0.3s ease-in-out;
 }
 
 /* Overlay container */
@@ -85,8 +102,21 @@ a:hover {
     align-items: center;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out; /* Background fades in */
+    transition: opacity 0.8s ease-in-out;
 }
+
+/* Ensure projects stack on small screens */
+@media (max-width: 768px) {
+    #projects {
+        flex-direction: column; /* Stacks vertically */
+        align-items: center; /* Centers projects */
+    }
+
+    .project {
+        max-width: 90%; /* Makes sure they don’t get too small */
+    }
+}
+
 
 /* Text inside overlay */
 .project-overlay h3,
@@ -110,6 +140,22 @@ a:hover {
     transform: translateY(0); /* Move to final position */
 }
 
+/* Default state - no blur */
+#content {
+    transition: filter 0.5s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Apply blur effect when the pop-up is active */
+.popup-active {
+    filter: blur(10px);
+    pointer-events: none; /* Prevents interaction with background */
+}
+
 /* Pop-up container */
 .popup {
     position: fixed;
@@ -125,6 +171,7 @@ a:hover {
     z-index: 10;
     text-align: center;
     box-sizing: border-box; /* Prevents padding from affecting width */
+    pointer-events: auto;
 }
 
 /* Centering the pop-up content */

@@ -9,49 +9,56 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Hi, my name is Sam Bain</h1>
-    </header>
+    <div id="content">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Hi, my name is Sam Bain</h1>
+        </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A short bio about your work in mechatronics and design.</p>
-    </section>
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>A short bio about your work in mechatronics and design.</p>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-    
-        <div class="project" onclick="openPopup('drone-popup')">
-            <div class="project-overlay">
-                <h3>Hybrid Spray Aircraft</h3>
-                <p>Designed and built a hybrid quadcopter capable of carrying 10 litres of spray and 5 litres of fuel over a 40 minute flight time.</p>
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+        
+            <div class="project" onclick="openPopup('drone-popup')">
+                <div class="project-overlay">
+                    <h3>Hybrid Spray Aircraft</h3>
+                    <p>Designed and built a hybrid quadcopter capable of carrying 10 litres of spray and 5 litres of fuel over a 40 minute flight time.</p>
+                </div>
+                <img src="images/spray_drone_main.PNG" alt="Custom Drone Design">
             </div>
-            <img src="images/spray_drone_main.PNG" alt="Custom Drone Design">
-        </div>
-    
-        <div class="project" onclick="openPopup('smart-battery-case-popup')"">
-            <div class="project-overlay">
-                <h3>Smart Battery Charging Case</h3>
-                <p>Developed a charging/carry case for Aeronavics custom Li-Ion battery packs.</p>
+        
+            <div class="project" onclick="openPopup('smart-battery-case-popup')"">
+                <div class="project-overlay">
+                    <h3>Smart Battery Charging Case</h3>
+                    <p>Developed a charging/carry case for Aeronavics custom Li-Ion battery packs.</p>
+                </div>
+                <img src="images/battery_charging_case_main.png" alt="Battery Charging Case">
             </div>
-            <img src="images/battery_charging_case_main.png" alt="Battery Charging Case">
-        </div>
 
-        <div class="project" onclick="openPopup('radar-popup')"">
-            <div class="project-overlay">
-                <h3>Radar Obstacle Avoidance</h3>
-                <p>Integrating a radar obstacle avoidance system to advance the safety and useability of drone platforms.</p>
+            <div class="project" onclick="openPopup('radar-popup')"">
+                <div class="project-overlay">
+                    <h3>Radar Obstacle Avoidance</h3>
+                    <p>Integrating a radar obstacle avoidance system to advance the safety and useability of drone platforms.</p>
+                </div>
+                <img src="images/radar_main.png" alt="Custom radar PCB on drone">
             </div>
-            <img src="images/radar_main.png" alt="Custom radar PCB on drone">
-        </div>
-    </section>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p>Email: sambain2001@gmail.com</p>
+        </section>
+    </div>
     
     <!-- Pop-up Windows -->
     <div id="drone-popup" class="popup">
@@ -72,16 +79,11 @@
 
     <div id="radar-popup" class="popup">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('smart-battery-case-popup')">&times;</span>
+            <span class="close-btn" onclick="closePopup('radar-popup')">&times;</span>
             <h2>Radar Obstacle Avoidance</h2>
             <p>Full details about the PCB project go here...</p>
         </div>
     </div>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: sambain2001@gmail.com</p>
-    </section>
 
     <footer>
         <p>© 2025 Samuel Bain</p>
