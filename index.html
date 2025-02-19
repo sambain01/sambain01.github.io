@@ -28,22 +28,28 @@
     <section id="projects">
         <h2>Projects</h2>
     
-        <div class="project">
+        <div class="project" onclick="openPopup('drone-popup')">
             <div class="project-overlay">
                 <h3>Hybrid Spray Aircraft</h3>
                 <p>Designed and built a hybrid quadcopter capable of carrying 10 litres of spray and 5 litres of fuel over a 40 minute flight time.</p>
-                <button class="explore-btn" onclick="openPopup('drone-popup')">Explore</button>
             </div>
             <img src="images/spray_drone_main.PNG" alt="Custom Drone Design">
         </div>
     
-        <div class="project">
+        <div class="project" onclick="openPopup('smart-battery-case-popup')"">
             <div class="project-overlay">
                 <h3>Smart Battery Charging Case</h3>
                 <p>Developed a charging/carry case for Aeronavics custom Li-Ion battery packs.</p>
-                <button class="explore-btn" onclick="openPopup('pcb-popup')">Explore</button>
             </div>
-            <img src="images/battery_charging_case_main.png" alt="High-Speed PCB Design">
+            <img src="images/battery_charging_case_main.png" alt="Battery Charging Case">
+        </div>
+
+        <div class="project" onclick="openPopup('radar-popup')"">
+            <div class="project-overlay">
+                <h3>Radar Obstacle Avoidance</h3>
+                <p>Integrating a radar obstacle avoidance system to advance the safety and useability of drone platforms.</p>
+            </div>
+            <img src="images/radar_main.png" alt="Custom radar PCB on drone">
         </div>
     </section>
     
@@ -51,15 +57,23 @@
     <div id="drone-popup" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('drone-popup')">&times;</span>
-            <h2>Custom Drone Design</h2>
+            <h2>Hybrid Spray Aircraft</h2>
             <p>Full details about the drone project go here...</p>
         </div>
     </div>
     
-    <div id="pcb-popup" class="popup">
+    <div id="smart-battery-case-popup" class="popup">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('pcb-popup')">&times;</span>
-            <h2>High-Speed PCB Design</h2>
+            <span class="close-btn" onclick="closePopup('smart-battery-case-popup')">&times;</span>
+            <h2>Smart Battery Charging Case</h2>
+            <p>Full details about the PCB project go here...</p>
+        </div>
+    </div>
+
+    <div id="radar-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('smart-battery-case-popup')">&times;</span>
+            <h2>Radar Obstacle Avoidance</h2>
             <p>Full details about the PCB project go here...</p>
         </div>
     </div>
