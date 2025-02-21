@@ -156,53 +156,92 @@ a:hover {
     pointer-events: none; /* Prevents interaction with background */
 }
 
-/* Pop-up container */
+/* General Pop-Up Styling */
 .popup {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Adjust width to prevent cut-off */
-    max-width: 600px; /* Limit max width for better readability */
-    background: #222;
+    width: 80%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.9);
     color: white;
     border-radius: 10px;
-    display: none;
-    z-index: 10;
-    text-align: center;
-    box-sizing: border-box; /* Prevents padding from affecting width */
-    pointer-events: auto;
+    overflow: hidden;
+    z-index: 1000;
 }
 
-/* Centering the pop-up content */
 .popup-content {
+    max-height: 80vh; /* Limits height to 80% of viewport */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 20px;
+}
+
+/* Background Image Section */
+.popup-header {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.popup-header h2 {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.popup-body {
+    padding: 20px;
+}
+
+/* Section Styling */
+.popup-section {
+    margin-bottom: 20px;
+}
+
+.popup-section h3 {
+    color: #f0a500;
+    margin-bottom: 5px;
+}
+
+/* Additional Images */
+.popup-image {
     width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
-/* Ensure images inside pop-up are responsive */
-.popup img {
-    max-width: 100%; /* Prevents oversized images */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Ensures centering */
+/* Skills List */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* Ensure text is properly aligned */
-.popup h2, .popup p {
-    width: 90%;
-    max-width: 500px;
-    margin: 10px auto;
+.skills-list li {
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* Close button adjustment */
+/* Close Button */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
+    background: #f0a500;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
 }

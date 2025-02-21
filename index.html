@@ -34,7 +34,7 @@
                     <h3>Hybrid Spray Aircraft</h3>
                     <p>Designed and built a hybrid quadcopter capable of carrying 10 litres of spray and 5 litres of fuel over a 40 minute flight time.</p>
                 </div>
-                <img src="images/spray_drone_main.PNG" alt="Custom Drone Design">
+                <img src="images/spray_drone_isometric_2.png" alt="Custom Drone Design">
             </div>
         
             <div class="project" onclick="openPopup('smart-battery-case-popup')"">
@@ -42,7 +42,7 @@
                     <h3>Smart Battery Charging Case</h3>
                     <p>Developed a charging/carry case for Aeronavics custom Li-Ion battery packs.</p>
                 </div>
-                <img src="images/battery_charging_case_main.png" alt="Battery Charging Case">
+                <img src="images/battery_charging_case_isometric.png" alt="Battery Charging Case">
             </div>
 
             <div class="project" onclick="openPopup('radar-popup')"">
@@ -50,7 +50,7 @@
                     <h3>Radar Obstacle Avoidance</h3>
                     <p>Integrating a radar obstacle avoidance system to advance the safety and useability of drone platforms.</p>
                 </div>
-                <img src="images/radar_main.png" alt="Custom radar PCB on drone">
+                <img src="images/radar_integrated.png" alt="Custom radar PCB on drone">
             </div>
         </section>
 
@@ -59,34 +59,79 @@
             <p>Email: sambain2001@gmail.com</p>
         </section>
     </div>
-    
-    <!-- Pop-up Windows -->
-    <div id="drone-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('drone-popup')">&times;</span>
-            <h2>Hybrid Spray Aircraft</h2>
-            <p>Full details about the drone project go here...</p>
-        </div>
-    </div>
-    
-    <div id="smart-battery-case-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('smart-battery-case-popup')">&times;</span>
-            <h2>Smart Battery Charging Case</h2>
-            <p>Full details about the PCB project go here...</p>
-        </div>
-    </div>
-
-    <div id="radar-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('radar-popup')">&times;</span>
-            <h2>Radar Obstacle Avoidance</h2>
-            <p>Full details about the PCB project go here...</p>
-        </div>
-    </div>
 
     <footer>
         <p>© 2025 Samuel Bain</p>
     </footer>
 </body>
+
+<!-- Pop-up Windows -->
+<div class="popup" id="drone-popup">
+    <div class="popup-content">
+        <!-- Background Image -->
+        <div class="popup-header" style="background-image: url('images/spray_drone_isometric_2.png');">
+            <h2>Hybrid Spray Drone</h2>
+        </div>
+
+        <!-- Sections -->
+        <div class="popup-body">
+            <section class="popup-section">
+                <h3>The Demand</h3>
+                <p>Invasive weed species such as wilding pines are continuing to take over large areas of farming and conservation land within New Zealand. The current methods of eradicating these species – by way of helicopter spraying and ground control – are expensive and time consuming.
+                </p>
+            </section>
+
+            <section class="popup-section">
+                <h3>Challenge</h3>
+                <p>To design a remotely operated aerial system capable of spraying targeted weeds over expansive areas. 
+                </p>
+                <img src="images/wilding_pines.jpg" class="popup-image" alt="Challenges">
+            </section>
+
+            <section class="popup-section">
+                <h3>Solution</h3>
+                <p>A hybrid petrol – electric spray drone, capable of carrying ten liters of spray alongside five liters of petrol, achieving flight times of up to fifty minutes. The drone features removeable arms for easy transportation, 360 degrees LIDAR based collision avoidance system, and full engine and system monitoring via the controller. 
+                </p>
+            </section>
+
+            <section class="popup-section">
+                <h3>My Contribution</h3>
+                <p>My main contribution was as the mechanical design lead for this project. This included designing of rapid mount and disconnect features, vibration isolating components, design for blow molding, design for rapid prototyping using in house additive manufacturing, laser cutting and machining processes, finite element analysis. I also aided in developing bespoke obstacle avoidance algorithms, as well as custom load cell modules for accurately measuring and reporting the fluid level in each of the three tanks.
+                </p>
+                <img src="images/loadcell_internals.png" class="popup-image" alt="Solution">
+            </section>
+
+            <section class="popup-section">
+                <h3>Key Skills</h3>
+                <ul class="skills-list">
+                    <li>SolidWorks CAD design</li>
+                    <li>C++ STM32 Embedded Development</li>
+                    <li>Rapid Design and Prototyping</li>
+                    <li>Rapid Design and Prototyping</li>
+                    <li>LIDAR Obstacle Avoidance</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePopup('project-popup')">Close</button>
+    </div>
+</div>
+
+<div id="smart-battery-case-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('smart-battery-case-popup')">&times;</span>
+        <h2>Smart Battery Charging Case</h2>
+        <p>Full details about the PCB project go here...</p>
+    </div>
+</div>
+
+<div id="radar-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('radar-popup')">&times;</span>
+        <h2>Radar Obstacle Avoidance</h2>
+        <p>Full details about the PCB project go here...</p>
+    </div>
+</div>
+
 </html>
