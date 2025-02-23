@@ -6,7 +6,6 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
 </head>
 <body>
     <div id="content">
@@ -75,7 +74,7 @@
 
         <!-- Sections -->
         <div class="popup-body">
-            <img src="images/spray_drone_isometric_2.png" class="popup-image popup-transparent" alt="Spray drone">
+            <!-- <img src="images/spray_drone_isometric_2.png" class="popup-image popup-transparent" alt="Spray drone"> -->
             <section class="popup-section">
                 <h3>The Demand</h3>
                 <p>Invasive weed species such as wilding pines are continuing to take over large areas of farming and conservation land within New Zealand. The current methods of eradicating these species – by way of helicopter spraying and ground control – are expensive and time consuming.
@@ -93,6 +92,7 @@
                 <h3>Solution</h3>
                 <p>A hybrid petrol – electric spray drone, capable of carrying ten liters of spray alongside five liters of petrol, achieving flight times of up to fifty minutes. The drone features removeable arms for easy transportation, 360 degrees LIDAR based collision avoidance system, and full engine and system monitoring via the controller. 
                 </p>
+                <img src="images/spray-drone-complete-build_thin.jpg" class="popup-image outdoor-image" alt="Solution">
             </section>
 
             <section class="popup-section">
@@ -100,7 +100,6 @@
                 <p>My main contribution was as the mechanical design lead for this project. This included designing of rapid mount and disconnect features, vibration isolating components, design for blow molding, design for rapid prototyping using in house additive manufacturing, laser cutting and machining processes, finite element analysis. I also aided in developing bespoke obstacle avoidance algorithms, as well as custom load cell modules for accurately measuring and reporting the fluid level in each of the three tanks.
                 </p>
                 <img src="images/loadcell_internals.png" class="popup-image popup-transparent" alt="Solution">
-                <img src="images/spray-drone-complete-build_thin.png" class="popup-image outdoor-image" alt="Solution">
                 </section>
 
             <section class="popup-section">
@@ -116,15 +115,66 @@
         </div>
 
         <!-- Close Button -->
-        <button class="close-btn" onclick="closePopup('project-popup')">Close</button>
+        <button class="close-btn" onclick="closePopup('drone-popup')">Close</button>
     </div>
 </div>
 
-<div id="smart-battery-case-popup" class="popup">
+<div class="popup" id="smart-battery-case-popup">
     <div class="popup-content">
-        <span class="close-btn" onclick="closePopup('smart-battery-case-popup')">&times;</span>
-        <h2>Smart Battery Charging Case</h2>
-        <p>Full details about the PCB project go here...</p>
+        <!-- Background Image -->
+        <div class="popup-header">
+            <h2>Smart Battery Charging Case</h2>
+        </div>
+
+        <!-- Sections -->
+        <div class="popup-body">
+            <section class="popup-section">
+                <h3>The Demand</h3>
+                <p>Aeronavics required the integration of a new battery management system, in order to provide battery protection mechanisms, and advanced health monitoring, for ultimate safety of our electric and hybrid RPAS platforms.
+                </p>
+            </section>
+  
+            <section class="popup-section">
+                <h3>Challenge</h3>
+                <p>To design and integrate a battery management system on a custom printed circuit board and integrate it mechanically to a lithium-ion battery pack. Furthermore, a custom charging/transportation case was required for safe storage and charging of the batteries. 
+                </p>
+            </section>
+
+            <section class="popup-section">
+                <h3>Solution</h3>
+                <p>Solution text
+                </p>
+                <div class="internal-reveal-container popup-transparent">
+                    <img src="images/battery_charging_case_isometric.png" alt="External View" class="external-image">
+                    <img src="images/battery_charging_case_internals.png" alt="Internal View" class="internal-image">
+                    <div class="mask"></div>
+                </div>
+            </section>
+
+            <section class="popup-section">
+                <h3>My Contribution</h3>
+                <p>My contribution to this project was extensive, including the full electrical, mechanical and software design of the battery management system. I also led the development of the mechanical and software systems for the battery charging case. A major aspect of this section of the project was the development of thermal regulation hardware in order to facilitate safe and rapid charging and active discharging functionality.
+                </p>
+                <img src="images/battery_charging_case_pcb_all.png" class="popup-image outdoor-image" alt="Battery Charger PCB">
+                </section>
+
+            <section class="popup-section">
+                <h3>Key Skills</h3>
+                <ul class="skills-list">
+                    <li>Altium PCB Design</li>
+                    <li>Computation Fluid Dynamics Modelling</li>
+                    <li>High Power considerations (100A +)</li>
+                    <li>End to end product design</li>
+                    <li>SolidWorks Sheet Metal design</li>
+                    <li>STM32 Embedded Development</li>
+                    <li>C programming</li>
+
+                </ul>
+            </section>
+        </div>
+
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePopup('smart-battery-case-popup')">Close</button>
     </div>
 </div>
 
@@ -136,4 +186,5 @@
     </div>
 </div>
 
+<script src="script.js"></script>
 </html>
