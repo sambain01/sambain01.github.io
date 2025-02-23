@@ -1,3 +1,5 @@
+var pop_up_open = false;
+
 function openPopup(id) {
     let popup = document.getElementById(id);
     popup.style.display = "block";
@@ -10,11 +12,10 @@ function openPopup(id) {
 function closePopup(id) {
     document.getElementById(id).style.display = "none";
     document.getElementById("content").classList.remove("popup-active"); // Remove blur effect
+    pop_up_open = false;
 }
 
 // Close pop-up when clicking outside the content
-
-var pop_up_open = false;
 addEventListener("click", function (event) {
     document.querySelectorAll(".popup").forEach(popup => {
         let content = popup.querySelector(".popup-content");
@@ -23,8 +24,9 @@ addEventListener("click", function (event) {
         if (popup.style.display == "block" && !content.contains(event.target)) {
             if (pop_up_open) {
                 closePopup(popup.id);    
+            } else {
+                pop_up_open = true;
             }
-            pop_up_open = !pop_up_open;
         }
     });
 });
