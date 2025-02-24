@@ -31,21 +31,24 @@ addEventListener("click", function (event) {
     });
 });
 
-const container = document.querySelector(".internal-reveal-container");
-const internalImage = document.querySelector(".internal-image");
+document.querySelectorAll(".xray-container").forEach(container => {
+    const internalImage = container.querySelector(".internal-image");
 
-container.addEventListener("mousemove", (e) => {
-    const { left, top, width, height } = container.getBoundingClientRect();
-    const x = ((e.clientX - left) / width) * 100;
-    const y = ((e.clientY - top) / height) * 100;
+    container.addEventListener("mousemove", (e) => {
+        const { left, top, width, height } = container.getBoundingClientRect();
+        const x = ((e.clientX - left) / width) * 100;
+        const y = ((e.clientY - top) / height) * 100;
 
-    internalImage.style.clipPath = `circle(20% at ${x}% ${y}%)`; // Adjust size for larger/smaller reveal area
-    internalImage.style.maskImage = `radial-gradient(circle at ${x}% ${y}%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 60%)`;
-    internalImage.style.webkitMaskImage = `radial-gradient(circle at ${x}% ${y}%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 60%)`;
+        internalImage.style.clipPath = `circle(20% at ${x}% ${y}%)`; // Adjust size for larger/smaller reveal area
+    })
 
+    container.addEventListener("mouseleave", (e) => {
+        const { left, top, width, height } = container.getBoundingClientRect();
+        const x = ((e.clientX - left) / width) * 100;
+        const y = ((e.clientY - top) / height) * 100;
+
+        internalImage.style.clipPath = `circle(0% at ${x}% ${y}%)`;
+    });    
 });
 
-container.addEventListener("mouseleave", () => {
-    internalImage.style.clipPath = "circle(0% at 50% 50%)"; // Resets effect when mouse leaves
-});
 
