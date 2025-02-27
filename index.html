@@ -51,6 +51,14 @@
                     <p>Integrating a radar obstacle avoidance system to advance the safety and useability of drone platforms.</p>
                 </div>
             </div>
+            
+            <div class="project" onclick="openPopup('wifi-weather-station-popup')"">
+                <img src="images/wifi_weather_station.png" class="sw-visualise-image" alt="Wifi weather station">
+                <div class="project-overlay">
+                    <h3>Wifi Weather Station</h3>
+                    <p>A low power esp32 weather station project running off a small solar panel.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -182,7 +190,7 @@
     <div class="popup-content">
         <!-- Background Image -->
         <div class="popup-header">
-            <h2>Smart Battery Charging Case</h2>
+            <h2>Radar Obstacle Avoidance</h2>
         </div>
 
         <!-- Sections -->
@@ -226,5 +234,52 @@
     </div>
 </div>
 
+<div id="wifi-weather-station-popup" class="popup">
+    <div class="popup-content">
+        <!-- Background Image -->
+        <div class="popup-header">
+            <h2>Wifi Weather Station</h2>
+        </div>
+
+        <!-- Sections -->
+        <div class="popup-body">
+            <section class="popup-section">
+                <h3>The Demand</h3>
+                <p>Demand text</p>
+            </section>
+  
+            <section class="popup-section">
+                <h3>Challenge</h3>
+                <p>Challenge text</p>
+            </section>
+
+            <section class="popup-section">
+                <h3>Solution</h3>
+                <p>Solution text
+                </p>
+                <div class="xray-container sw-visualise-image">
+                    <img src="images/wifi_weather_station.png" alt="External View" class="external-image">
+                    <img src="images/wifi_weather_station_internals.png" alt="Internal View" class="internal-image">
+                    <div class="mask"></div>
+                </div>
+            </section>
+
+            <section class="popup-section">
+                <h3>My Contribution</h3>
+                <p>Contribution text</p>
+                </section>
+
+            <section class="popup-section">
+                <h3>Key Skills</h3>
+                <ul class="skills-list">
+                    <li>Altium PCB Design</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePopup('wifi-weather-station-popup')">Close</button>
+    </div>
+</div>
 <script src="script.js"></script>
 </html>
