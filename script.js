@@ -51,4 +51,15 @@ document.querySelectorAll(".xray-container").forEach(container => {
     });    
 });
 
+var typed = new Typed("#typing", {
+    strings: ["Mechatronics Engineer", "Designer", "Drone Pilot", "Traveller", "Runner", "Skier"],
+    typeSpeed: 75,
+    backSpeed: 40,
+    backDelay: 2000,
+    Delay: 500,
+    startDelay: 1000,
+    smartBackspace: false,
+    loop: true,
+    cursorChar: "_",
+});
 

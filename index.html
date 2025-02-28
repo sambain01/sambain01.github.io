@@ -8,22 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div id="content">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>Hi, my name is Sam Bain</h1>
-        </header>
+        <div class="cover-photo">
+        <h1>Hi, my name is Sam Bain</h1>
+        <h2>I am a <span id="typing" class="typed-text"></span></h2>
 
         <section id="about">
             <h2 class="section-title">About Me</h2>
-            <p>A short bio about your work in mechatronics and design.</p>
+            <p>Highly organized and adaptable mechatronics engineer with 2+ years of experience designing, developing, and optimizing complex mechanical, electrical, and software systems. Proven expertise in autonomous drones, embedded systems, and power management. Passionate about solving technical challenges with innovative solutions and a strong ability to learn quickly and work across multidisciplinary teams.</p>
         </section>
+        </div>
 
         <section id="projects">
             <h2 class="section-title">Projects</h2>
@@ -281,5 +284,6 @@
         <button class="close-btn" onclick="closePopup('wifi-weather-station-popup')">Close</button>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="script.js"></script>
 </html>
