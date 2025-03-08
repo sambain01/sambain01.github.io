@@ -8,21 +8,35 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Style the navigation bar */
-nav ul {
+nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    color: white;
-    padding: 0px 0px;
     z-index: 1000; /* Ensures it's on top of everything */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 15px 0;
+    width: 100%;
+    color: white;
     display: flex;
     justify-content: center;
     gap: 20%;
     align-items: center;
+    backdrop-filter: blur(8px); /* Adds blur effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
+    list-style: none;
 }
 
 html {
@@ -44,6 +58,8 @@ html {
     text-align: center;
     color: white;
     background-position: 50% 33%; /* Moves it 20% down from the top */
+    margin-top: 0;
+    top: 0;
 }
 
 /* Dark overlay for readability */
@@ -148,7 +164,7 @@ a:hover {
     flex: 1 1 calc(33.33333% - 20px); /* Flexible width with a minimum size */
     max-width: 300px; /* Prevents projects from becoming too wide */
     min-width: 240px;
-    overflow: hidden; /* Ensures overlays don’t spill out */
+    overflow: hidden; /* Ensures overlays don't spill out */
     border-radius: 10px;
 }
 
@@ -185,7 +201,7 @@ a:hover {
     }
 
     .project {
-        max-width: 90%; /* Makes sure they don’t get too small */
+        max-width: 90%; /* Makes sure they don't get too small */
     }
 }
 
