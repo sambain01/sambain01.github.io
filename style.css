@@ -241,7 +241,7 @@ a:hover {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 900px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(75, 83, 32, 0.9);
     color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -249,17 +249,13 @@ a:hover {
 }
 
 .popup-content {
-    max-height: 80vh; /* Limits height to 80% of viewport */
-    overflow-y: auto; /* Enables vertical scrolling */
-    
-}
-
-.popup-content {
     max-height: 80vh;
     padding: 20px;
+    align-items: center;
     overflow-y: auto; /* Allows scrolling */
     scrollbar-width: none; /* Hides scrollbar in Firefox */
     -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+    justify-content: center; /* Centers content horizontally */
 }
 
 /* Hides scrollbar in Chrome, Edge, Safari */
@@ -325,9 +321,10 @@ a:hover {
 .xray-container {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Adjust to your image size */
+    max-width: 500px; /* Adjust to your image size */
     height: auto;
     overflow: hidden;
+    margin: auto;
 }
 
 .external-image, .internal-image {

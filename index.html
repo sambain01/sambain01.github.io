@@ -32,7 +32,7 @@
             <h2 class="section-title">Projects</h2>
         
             <div class="project" onclick="openPopup('drone-popup')">
-                <img src="images/spray_drone_isometric_2.png" class="sw-visualise-image" alt="Custom Drone Design">
+                <img src="images/spray-drone/spray_drone_isometric.png" class="sw-visualise-image" alt="Custom Drone Design">
                 <div class="project-overlay">
                     <h3>Hybrid Spray Aircraft</h3>
                     <p>Designed and built a hybrid quadcopter capable of carrying 10 litres of spray and 5 litres of fuel over a 40 minute flight time.</p>
@@ -40,7 +40,7 @@
             </div>
         
             <div class="project" onclick="openPopup('smart-battery-case-popup')"">
-                <img src="images/battery_charging_case_isometric.png" class="sw-visualise-image" alt="Battery Charging Case">
+                <img src="images/battery-charging-case/battery_charging_case_isometric.png" class="sw-visualise-image" alt="Battery Charging Case">
                 <div class="project-overlay">
                     <h3>Smart Battery Charging Case</h3>
                     <p>Developed a charging/carry case for Aeronavics custom Li-Ion battery packs.</p>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="project" onclick="openPopup('radar-popup')"">
-                <img src="images/radar_integrated.png" class="sw-visualise-image" alt="Custom radar PCB on drone">
+                <img src="images/radar/radar_integrated.png" class="sw-visualise-image" alt="Custom radar PCB on drone">
                 <div class="project-overlay">
                     <h3>Radar Obstacle Avoidance</h3>
                     <p>Integrating a radar obstacle avoidance system to advance the safety and useability of drone platforms.</p>
@@ -56,7 +56,7 @@
             </div>
             
             <div class="project" onclick="openPopup('wifi-weather-station-popup')"">
-                <img src="images/wifi_weather_station.png" class="sw-visualise-image" alt="Wifi weather station">
+                <img src="images/wifi-weather-station/wifi_weather_station.png" class="sw-visualise-image" alt="Wifi weather station">
                 <div class="project-overlay">
                     <h3>Wifi Weather Station</h3>
                     <p>A low power esp32 weather station project running off a small solar panel.</p>
@@ -85,12 +85,12 @@
 
         <!-- Sections -->
         <div class="popup-body">
-            <img src="images/spray_drone_rear_view.png" class="popup-image sw-visualise-image" alt="Spray drone">
+            <img src="images/spray-drone/spray_drone_rear_view.png" class="popup-image sw-visualise-image" alt="Spray drone">
             <section class="popup-section">
                 <h3>The Demand</h3>
                 <p>Invasive weed species such as wilding pines are continuing to take over large areas of farming and conservation land within New Zealand. The current methods of eradicating these species – by way of helicopter spraying and ground control – are expensive and time consuming.
                 </p>
-                <img src="images/wilding_pines.jpg" class="popup-image outdoor-image" alt="Demand">
+                <img src="images/spray-drone/wilding_pines.jpg" class="popup-image outdoor-image" alt="Demand">
             </section>
 
             <section class="popup-section">
@@ -103,14 +103,14 @@
                 <h3>Solution</h3>
                 <p>A hybrid petrol – electric spray drone, capable of carrying ten liters of spray alongside five liters of petrol, achieving flight times of up to fifty minutes. The drone features removeable arms for easy transportation, 360 degrees LIDAR based collision avoidance system, and full engine and system monitoring via the controller. 
                 </p>
-                <img src="images/spray-drone-complete-build_thin.jpg" class="popup-image outdoor-image" alt="Solution">
+                <img src="images/spray-drone/spray_drone_scenic.jpg" class="popup-image outdoor-image" alt="Solution">
             </section>
 
             <section class="popup-section">
                 <h3>My Contribution</h3>
                 <p>My main contribution was as the mechanical design lead for this project. This included designing of rapid mount and disconnect features, vibration isolating components, design for blow molding, design for rapid prototyping using in house additive manufacturing, laser cutting and machining processes, finite element analysis. I also aided in developing bespoke obstacle avoidance algorithms, as well as custom load cell modules for accurately measuring and reporting the fluid level in each of the three tanks.
                 </p>
-                <img src="images/loadcell_internals.png" class="popup-image sw-visualise-image" alt="Solution">
+                <img src="images/spray-drone/loadcell_internals_dark_background.png" class="popup-image sw-visualise-image" alt="Solution">
                 </section>
 
             <section class="popup-section">
@@ -153,11 +153,18 @@
 
             <section class="popup-section">
                 <h3>Solution</h3>
-                <p>Solution text
+                <p>A fully integrated battery and charging case was developed. The battery included automated health and state of charge monitoring, which was communicated to aircraft or charging case via CANBUS. Furthermore, the batteries incorporated comprehensive failsafe algorithms in order to avoid damage and maintain user safety during over-current, over-temperature or extreme voltage conditions.
                 </p>
                 <div class="xray-container sw-visualise-image">
-                    <img src="images/battery_charging_case_external_aligned.png" alt="External View" class="external-image">
-                    <img src="images/battery_charging_case_internal_aligned.png" alt="Internal View" class="internal-image">
+                    <img src="images/battery-charging-case/smart_battery_external_aligned.png" alt="External View" class="external-image">
+                    <img src="images/battery-charging-case/smart_battery_internals_aligned.png" alt="Internal View" class="internal-image">
+                    <div class="mask"></div>
+                </div>
+                <p>The battery charging case features intelligent charging modes to minimise charge time without compromising battery health or causing temperature concerns. The charging case also allows active discharge modes, maintaining the batteries at an optimal charge level for travel and long term storage.
+                </p>
+                <div class="xray-container sw-visualise-image">
+                    <img src="images/battery-charging-case/battery_charging_case_external_aligned.png" alt="External View" class="external-image">
+                    <img src="images/battery-charging-case/battery_charging_case_internal_aligned.png" alt="Internal View" class="internal-image">
                     <div class="mask"></div>
                 </div>
             </section>
@@ -166,7 +173,8 @@
                 <h3>My Contribution</h3>
                 <p>My contribution to this project was extensive, including the full electrical, mechanical and software design of the battery management system. I also led the development of the mechanical and software systems for the battery charging case. A major aspect of this section of the project was the development of thermal regulation hardware in order to facilitate safe and rapid charging and active discharging functionality.
                 </p>
-                <img src="images/battery_charging_case_pcb_all.png" class="popup-image outdoor-image" alt="Battery Charger PCB">
+                <img src="images/battery-charging-case/battery_charging_case_pcb_all.png" class="popup-image outdoor-image" alt="Battery Charger PCB">
+                <img src="images/battery-charging-case/battery_charging_case_thermal_sim.png" class="popup-image outdoor-image" alt="Battery Charger PCB">
                 </section>
 
             <section class="popup-section">
@@ -200,34 +208,42 @@
         <div class="popup-body">
             <section class="popup-section">
                 <h3>The Demand</h3>
-                <p>Demand text</p>
+                <p>Vision and LIDAR based avoidance systems are unable to provide robust obstacle tracking in unideal environments such as poor weather and extreme lighting conditions. Radar poses a potential detection system that is complementary to the LIDAR detection systems currently used on Aeronavics aircrafts.
+                </p>
             </section>
   
             <section class="popup-section">
                 <h3>Challenge</h3>
-                <p>Challenge text</p>
+                <p>To investigate the effectiveness of radar detection systems currently on the market and integrate a detection system into Aeronavics aircraft.
+                </p>
             </section>
 
             <section class="popup-section">
                 <h3>Solution</h3>
-                <p>Solution text
+                <p>A custom radar module PCB was developed, based on a Texas Instruments 77GHz industrial radar sensor IC, containing a DSP, MCU and hardware accelerator. The modules can detect and locate small obstacles such as low voltage power lines at distances of up to 30 meters with a reliability of 95% within this range, while also detecting other aircraft at a range of up to 200 meters. Each module can simultaneously track the position of up to 30 obstacles in 3d space and report this data back to the primary flight controller over CANBUS using CAN-FD protocols.
                 </p>
                 <div class="xray-container">
-                    <img src="images/radar_pcb_3d_aligned.png" alt="External View" class="external-image">
-                    <img src="images/radar_pcb_layer_view_aligned.png" alt="Internal View" class="internal-image">
+                    <img src="images/radar/radar_pcb_3d_aligned.png" alt="External View" class="external-image">
+                    <img src="images/radar/radar_pcb_layer_view_aligned.png" alt="Internal View" class="internal-image">
                     <div class="mask"></div>
                 </div>
             </section>
 
             <section class="popup-section">
                 <h3>My Contribution</h3>
-                <p>Contribution text</p>
+                <p>Myself and a fellow coworker worked together to design the printed circuit board to be used for the project. After reviewing and testing the board in isolation, it was my job to adapt the open source software on the integrated imu/dsp chip, in order to output the 3D obstacle messsages to the drones CANBUS.
+                </p>
+                <p>Upon validation of the new software, I then began full integration flight testing, in order to quantify the detection rate of the new sensors. Once I had formed an accurate model of the sensors capabilities, I adapted the drones avoidance algorithms in order to optimize them for safety and reliability. 
+                </p>
+                <img src="images/radar/beamsteering_mimo_advanced.png" class="popup-image outdoor-image" alt="Radar Testing Plot">
                 </section>
 
             <section class="popup-section">
                 <h3>Key Skills</h3>
                 <ul class="skills-list">
-                    <li>Altium PCB Design</li>
+                    <li>High Frequency PCB Design</li>
+                    <li>CAN-FD protocol development</li>
+                    <li>Testing and Reporting</li>
                 </ul>
             </section>
         </div>
@@ -261,8 +277,8 @@
                 <p>Solution text
                 </p>
                 <div class="xray-container sw-visualise-image">
-                    <img src="images/wifi_weather_station.png" alt="External View" class="external-image">
-                    <img src="images/wifi_weather_station_internals.png" alt="Internal View" class="internal-image">
+                    <img src="images/wifi-weather-station/wifi_weather_station.png" alt="External View" class="external-image">
+                    <img src="images/wifi-weather-station/wifi_weather_station_internals.png" alt="Internal View" class="internal-image">
                     <div class="mask"></div>
                 </div>
             </section>
