@@ -247,6 +247,12 @@ a:hover {
 .popup-active {
     filter: blur(10px);
     pointer-events: none; /* Prevents interaction with background */
+    overflow: hidden;
+}
+
+/* Prevent body scroll when a popup is active */
+body.no-scroll {
+    overflow: hidden;
 }
 
 /* General Pop-Up Styling */

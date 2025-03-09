@@ -4,6 +4,7 @@ function openPopup(id) {
     let popup = document.getElementById(id);
     popup.style.display = "block";
     document.getElementById("content").classList.add("popup-active"); // Add blur effect
+    document.body.classList.add('no-scroll'); // Disable body scroll 
 
     // Ensure it starts at the top
     popup.querySelector('.popup-content').scrollTop = 0;
@@ -12,6 +13,7 @@ function openPopup(id) {
 function closePopup(id) {
     document.getElementById(id).style.display = "none";
     document.getElementById("content").classList.remove("popup-active"); // Remove blur effect
+    document.body.classList.remove('no-scroll'); // Disable body scroll 
     pop_up_open = false;
 }
 
