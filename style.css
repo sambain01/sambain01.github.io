@@ -338,10 +338,11 @@ a:hover {
 .xray-container {
     position: relative;
     width: 100%;
-    max-width: 500px; /* Adjust to your image size */
+    max-width: 500px;
     height: auto;
     overflow: hidden;
     margin: auto;
+    cursor: pointer; /* Indicates interactivity */
 }
 
 .external-image, .internal-image {
@@ -357,6 +358,54 @@ a:hover {
     height: 100%;
     clip-path: circle(0% at 50% 50%); /* Initially hidden */
     transition: clip-path 0.15s ease-out;
+}
+
+/* Desktop hover effect - back to original */
+@media (hover: hover) {
+    .xray-container:hover .internal-image {
+        clip-path: circle(20% at var(--mouse-x, 50%) var(--mouse-y, 50%));
+    }
+}
+
+/* Mobile toggle effect */
+@media (hover: none) {
+    .xray-container {
+        position: relative;
+    }
+    
+    .xray-container::before {
+        content: "Tap to see internals";
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        z-index: 3;
+        pointer-events: none;
+        opacity: 0.8;
+    }
+
+    .internal-image {
+        opacity: 0;
+        clip-path: none;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .xray-container.show-internal .external-image {
+        opacity: 0;
+    }
+
+    .xray-container.show-internal .internal-image {
+        opacity: 1;
+    }
+
+    .xray-container.show-internal::before {
+        content: "Tap to see exterior";
+    }
 }
 
 .mask {

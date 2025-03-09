@@ -31,24 +31,36 @@ addEventListener("click", function (event) {
     });
 });
 
+// Handle xray container interactions
 document.querySelectorAll(".xray-container").forEach(container => {
     const internalImage = container.querySelector(".internal-image");
 
+    // Mouse move handling for desktop
     container.addEventListener("mousemove", (e) => {
-        const { left, top, width, height } = container.getBoundingClientRect();
-        const x = ((e.clientX - left) / width) * 100;
-        const y = ((e.clientY - top) / height) * 100;
+        if (window.matchMedia("(hover: hover)").matches) {
+            const { left, top, width, height } = container.getBoundingClientRect();
+            const x = ((e.clientX - left) / width) * 100;
+            const y = ((e.clientY - top) / height) * 100;
+            internalImage.style.clipPath = `circle(20% at ${x}% ${y}%)`;
+        }
+    });
 
-        internalImage.style.clipPath = `circle(20% at ${x}% ${y}%)`; // Adjust size for larger/smaller reveal area
-    })
+    // Touch handling for mobile
+    container.addEventListener("click", (e) => {
+        if (window.matchMedia("(hover: none)").matches) {
+            container.classList.toggle("show-internal");
+        }
+    });
 
     container.addEventListener("mouseleave", (e) => {
-        const { left, top, width, height } = container.getBoundingClientRect();
-        const x = ((e.clientX - left) / width) * 100;
-        const y = ((e.clientY - top) / height) * 100;
-
-        internalImage.style.clipPath = `circle(0% at ${x}% ${y}%)`;
-    });    
+        if (window.matchMedia("(hover: hover)").matches) {
+            const { left, top, width, height } = container.getBoundingClientRect();
+            const x = ((e.clientX - left) / width) * 100;
+            const y = ((e.clientY - top) / height) * 100;
+    
+            internalImage.style.clipPath = `circle(0% at ${x}% ${y}%)`;
+        }
+    });
 });
 
 var typed = new Typed("#typing", {
