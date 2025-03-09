@@ -270,13 +270,13 @@
   
             <section class="popup-section">
                 <h3>Challenge</h3>
-                <p>To design an esp32 based weather station, capable of measuring </p>
+                <p>To design a wireless weather station, capable of measuring and reporting rainfall and temperature every hour of the day. The weather station should require no external power or battery changes, and should be able to report the data to database stored in the cloud for reporting on a custom webapp.</p>
             </section>
 
             <section class="popup-section">
                 <h3>Solution</h3>
-                <p>Solution text
-                </p>
+                <p>A custom weather station was developed utilising a tip bucket rain gauge design, paired with an esp32 module. The design utilises the onboard hall effect sensor for bucket tip detection, along with the onboard wifi module for reporting the data to a firebase database.</p>
+                <p>The design utilises an extremely small 150mW solar panel, which integrates cleanly with the design. In order to sustain its battery level with such low input power, the module utilises esp32's low power subprocessor for registering bucket times, while waking up once per hour to upload to the database. During periods of extended lack of sunlight when the battery level becomes depleted, the module stores the data in flash until the battery level restabilises, and the data is bulk uploaded to the database. In this mode, the weather station can last 200 days off a single 18650 battery.</p>
                 <div class="side-by-side">
                     <div class="xray-container side-by-side-xray-container sw-visualise-image">
                         <img src="images/wifi-weather-station/wifi_weather_station.png" alt="External View" class="external-image">
@@ -291,14 +291,13 @@
             </section>
 
             <section class="popup-section">
-                <h3>My Contribution</h3>
-                <p>Contribution text</p>
-                </section>
-
-            <section class="popup-section">
                 <h3>Key Skills</h3>
                 <ul class="skills-list">
-                    <li>Altium PCB Design</li>
+                    <li>Kicad PCB Design</li>
+                    <li>Solar Power Management</li>
+                    <li>Webpage Development</li>
+                    <li>Assembly Programming</li>
+                    <li>Database Management</li>
                 </ul>
             </section>
         </div>
