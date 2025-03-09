@@ -265,18 +265,18 @@
             <section class="popup-section">
                 <h3>The Demand</h3>
                 <p>My parents live on a farm in a remote area, and like to keep track of rainfall and temperature, in order to optimise their pasture management and fertiliser application.</p>
-                <p>Traditionally they were using a plastic rain gauge and logging the data on a handwritten spreadsheet. This required daily attention in order to get accurate data, and extracting anything meaningful from the data was difficult and time consuming.</p>
+                <p>Traditionally they were using a manual rain gauge and logging the data on a handwritten spreadsheet. This required daily attention in order to get accurate data, and extracting anything meaningful from the data was difficult and time consuming.</p>
             </section>
   
             <section class="popup-section">
                 <h3>Challenge</h3>
-                <p>To design a wireless weather station, capable of measuring and reporting rainfall and temperature every hour of the day. The weather station should require no external power or battery changes, and should be able to report the data to database stored in the cloud for reporting on a custom webapp.</p>
+                <p>To design a wireless weather station, capable of measuring and reporting rainfall and temperature every hour of the day. The weather station should require no external power or battery changes, and should be able to report the data to a database stored in the cloud for displaying on a custom webapp.</p>
             </section>
 
             <section class="popup-section">
                 <h3>Solution</h3>
                 <p>A custom weather station was developed utilising a tip bucket rain gauge design, paired with an esp32 module. The design utilises the onboard hall effect sensor for bucket tip detection, along with the onboard wifi module for reporting the data to a firebase database.</p>
-                <p>The design utilises an extremely small 150mW solar panel, which integrates cleanly with the design. In order to sustain its battery level with such low input power, the module utilises esp32's low power subprocessor for registering bucket times, while waking up once per hour to upload to the database. During periods of extended lack of sunlight when the battery level becomes depleted, the module stores the data in flash until the battery level restabilises, and the data is bulk uploaded to the database. In this mode, the weather station can last 200 days off a single 18650 battery.</p>
+                <p>The design utilises an extremely small 150mW solar panel, which integrates cleanly with the design. In order to sustain its battery level with such low input power, the module utilises esp32's low power subprocessor for registering bucket tips, while waking up once per hour to upload to the database. During periods of extended lack of sunlight when the battery level becomes depleted, the module stores the data in flash until the battery level restabilises, and the data is bulk uploaded to the database. In this mode, the weather station can last 200 days off a single 18650 battery.</p>
                 <div class="side-by-side">
                     <div class="xray-container side-by-side-xray-container sw-visualise-image">
                         <img src="images/wifi-weather-station/wifi_weather_station.png" alt="External View" class="external-image">
