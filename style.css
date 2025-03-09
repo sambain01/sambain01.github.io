@@ -47,7 +47,7 @@ html {
 /* Cover Photo Section */
 .cover-photo {
     position: relative;
-    width: 105%;
+    width: 100vw;
     height: 100vh; /* Full screen height */
     background: url('images/drone_pilot_photo.jpg') no-repeat center center/cover;
     background-attachment: fixed; /* Makes it stay in place */
