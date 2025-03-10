@@ -66,6 +66,14 @@
                     <p>A low power esp32 weather station project running off a small solar panel.</p>
                 </div>
             </div>
+
+            <div class="project" onclick="openPopup('weeding-robot-popup')"">
+                <img src="images/weeding-robot/weeding-robot-main.png" alt="Weeding robot">
+                <div class="project-overlay">
+                    <h3>Autonomous Weeding Robot</h3>
+                    <p>An intelligent spot-spraying robot for weeding between row crops.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -290,7 +298,6 @@
                     <div class="side-by-side-image-container">
                         <img src="images/wifi-weather-station/wifi_weather_station_webpage.png" class="popup-image side-by-side-image" alt="Radar Testing Plot">
                     </div>
-                   
                 </div>
             </section>
 
@@ -310,6 +317,63 @@
         <button class="close-btn" onclick="closePopup('wifi-weather-station-popup')">Close</button>
     </div>
 </div>
+
+<div id="weeding-robot-popup" class="popup">
+    <!--TODO: Proof read
+              Add inset video-->
+    <div class="popup-content">
+        <!-- Background Image -->
+        <div class="popup-header">
+            <h2>Autonomous Weeding Robot</h2>
+        </div>
+
+        <!-- Sections -->
+        <div class="popup-body">
+            <section class="popup-section">
+                <h3>The Demand</h3>
+                <p>Weeding and monitoring row crops is a labour-intensive task. The labour to fulfil this role is becoming increasingly difficult to find, which is jeopardizing yield quality and economic returns.</p>
+                </section>
+  
+            <section class="popup-section">
+                <h3>Challenge</h3>
+                <p>To create an autonomous robot that can effectively navigate around crop rows while identifying and eliminating invasive weed species. Furthermore, Plant Research wanted the vehicle to be a suitable base for future module development.</p>
+            </section>
+
+            <section class="popup-section">
+                <h3>Solution</h3>
+                <p>A fully customized 4WD robot featuring: GPS navigation with 5 cm accuracy, real time obstacle detection and avoidance using a vision system and weed identification, tracking and spot spraying. All easily controllable through a webpage accessed from the user’s smart phone. See here for a full functionality demonstration.</p>
+                <div class="side-by-side">
+                    <img src="images/weeding-robot/weeding-robot-main.png" alt="Weeding robot main" class="popup-image">
+                    <div class="side-by-side-image-container">
+                        <img src="images/weeding-robot/weeding-robot-app.png" alt="Weeding robot app" class="popup-image outdoor-image">
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="popup-section">
+                <h3>My Contribution</h3>
+                <p>This project was conducted between myself and a fellow intern, before continuing it as a final year project. We were tasked with developing the robot from the ground up, including mechanical design and manufacture, power management, and software implementation and communication. My focus area for the final year project has been the navigation system, including generating robust control algorithms, and integrating this with the obstacle avoidance vision system to overcome real time navigational challenges. A video of this functionality can be seen here.</p>
+                <img src="images/weeding-robot/weeding-robot-app-nav.png" alt="Weeding robot app" class="popup-image stand-alone-app-image">
+            </section>
+
+            <section class="popup-section">
+                <h3>Key Skills</h3>
+                <ul class="skills-list">
+                    <li>RTK GPS navigation</li>
+                    <li>PID control algorithms</li>
+                    <li>Computer Vision - OpenCV</li>
+                    <li>Solidworks CAD</li>
+                    <li>Design for Manufacture and Assembly</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePopup('weeding-robot-popup')">Close</button>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="script.js"></script>
 </html>

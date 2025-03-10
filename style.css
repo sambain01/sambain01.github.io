@@ -319,6 +319,12 @@ body.no-scroll {
     height: auto;
 }
 
+.stand-alone-app-image {
+    width: auto;
+    height: 40vh;
+    margin: auto;
+}
+
 .popup-image:hover {
     transform: scale(1.01); /* Slight zoom for emphasis */
 }
