@@ -1,3 +1,18 @@
+// Add this to the beginning of your script
+
+var isTouch;
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if it's a touch device
+    if (navigator.maxTouchPoints > 0 || window.matchMedia("(hover: none)").matches) {
+      document.documentElement.classList.add('touch-device');
+    } else {
+      document.documentElement.classList.add('no-touch-device');
+    }
+
+    isTouch = document.documentElement.classList.contains('touch-device');
+  });
+
 var pop_up_open = false;
 
 function openPopup(id) {
@@ -39,7 +54,7 @@ document.querySelectorAll(".xray-container").forEach(container => {
 
     // Mouse move handling for desktop
     container.addEventListener("mousemove", (e) => {
-        if (window.matchMedia("(hover: hover)").matches) {
+        if (!isTouch) {
             const { left, top, width, height } = container.getBoundingClientRect();
             const x = ((e.clientX - left) / width) * 100;
             const y = ((e.clientY - top) / height) * 100;
@@ -49,13 +64,13 @@ document.querySelectorAll(".xray-container").forEach(container => {
 
     // Touch handling for mobile
     container.addEventListener("click", (e) => {
-        if (window.matchMedia("(hover: none)").matches) {
+        if (isTouch) {
             container.classList.toggle("show-internal");
         }
     });
 
     container.addEventListener("mouseleave", (e) => {
-        if (window.matchMedia("(hover: hover)").matches) {
+        if (!isTouch) {
             const { left, top, width, height } = container.getBoundingClientRect();
             const x = ((e.clientX - left) / width) * 100;
             const y = ((e.clientY - top) / height) * 100;

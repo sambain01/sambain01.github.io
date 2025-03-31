@@ -171,7 +171,7 @@ a:hover {
 /* Ensure images fit properly */
 .project img {
     width: 100%; /* Makes sure images scale correctly */
-    height: 100% /* Keeps aspect ratio */
+    height: 100%; /* Keeps aspect ratio */
     display: block;
 }
 
@@ -367,52 +367,49 @@ body.no-scroll {
 }
 
 /* Desktop hover effect - back to original */
-@media (hover: hover) {
-    .xray-container:hover .internal-image {
+.no-touch-device .xray-container:hover .internal-image {
         clip-path: circle(20% at var(--mouse-x, 50%) var(--mouse-y, 50%));
     }
-}
 
 /* Mobile toggle effect */
-@media (hover: none) {
-    .xray-container {
-        position: relative;
-    }
-    
-    .xray-container::before {
-        content: "Tap to see internals";
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 14px;
-        z-index: 3;
-        pointer-events: none;
-        opacity: 0.8;
-    }
-
-    .internal-image {
-        opacity: 0;
-        clip-path: none;
-        transition: opacity 0.3s ease-out;
-    }
-
-    .xray-container.show-internal .external-image {
-        opacity: 0;
-    }
-
-    .xray-container.show-internal .internal-image {
-        opacity: 1;
-    }
-
-    .xray-container.show-internal::before {
-        content: "Tap to see exterior";
-    }
+.touch-device .xray-container {
+    position: relative;
 }
+    
+.touch-device .xray-container::before {
+    content: "Tap to see internals";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.touch-device .internal-image {
+    opacity: 0;
+    clip-path: none;
+    transition: opacity 0.3s ease-out;
+}
+
+.touch-device .xray-container.show-internal .external-image {
+    opacity: 0;
+}
+
+.touch-device .xray-container.show-internal .internal-image {
+    opacity: 1;
+}
+
+.touch-device .xray-container.show-internal::before {
+    content: "Tap to see exterior";
+}
+
 
 .mask {
     position: absolute;
