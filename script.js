@@ -77,17 +77,3 @@ var typed = new Typed("#typing", {
     cursorChar: "_",
 });
 
-// Handle scroll indicator visibility
-const scrollIndicator = document.querySelector('.scroll-indicator');
-let isScrollIndicatorVisible = true;
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100 && isScrollIndicatorVisible) {
-        scrollIndicator.style.opacity = '0';
-        isScrollIndicatorVisible = false;
-    } else if (window.scrollY <= 100 && !isScrollIndicatorVisible) {
-        scrollIndicator.style.opacity = '1';
-        isScrollIndicatorVisible = true;
-    }
-});
-
