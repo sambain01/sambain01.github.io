@@ -171,7 +171,7 @@ a:hover {
 /* Ensure images fit properly */
 .project img {
     width: 100%; /* Makes sure images scale correctly */
-    height: 100% /* Keeps aspect ratio */
+    height: 100%; /* Keeps aspect ratio */
     display: block;
 }
 
@@ -382,17 +382,17 @@ body.no-scroll {
     .xray-container::before {
         content: "Tap to see internals";
         position: absolute;
-        bottom: 10px;
+        bottom: 20px; /* Adjusted for better visibility */
         left: 50%;
         transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.8); /* Slightly darker for contrast */
         color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 14px;
+        padding: 10px 20px; /* Larger tap area */
+        border-radius: 25px;
+        font-size: 16px; /* Larger text for readability */
         z-index: 3;
         pointer-events: none;
-        opacity: 0.8;
+        opacity: 1; /* Ensure it's fully visible */
     }
 
     .internal-image {

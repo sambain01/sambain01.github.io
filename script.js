@@ -47,7 +47,7 @@ document.querySelectorAll(".xray-container").forEach(container => {
         }
     });
 
-    // Touch handling for mobile
+    // Touch handling for mobile - ensure this toggles correctly
     container.addEventListener("click", (e) => {
         if (window.matchMedia("(hover: none)").matches) {
             container.classList.toggle("show-internal");
