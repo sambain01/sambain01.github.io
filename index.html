@@ -62,6 +62,22 @@
                     <p>A low power esp32 weather station project running off a small solar panel.</p>
                 </div>
             </div>
+
+            <div class="project" onclick="openPopup('zone-refiner-station-popup')"">
+                <img src="images/zone-refiner-station/refiner-station-render.png" class="sw-visualise-image" alt="Zone Refiner Station">
+                <div class="project-overlay">
+                    <h3>Zone Refiner Station</h3>
+                    <p>A PLC design project incorporating mechanical design and thermal considerations, as well as PLC, motion, and HMI design.</p>
+                </div>
+            </div>
+
+            <div class="project" onclick="openPopup('robotic-palletizer-popup')"">
+                <img src="images/robotic-palletizer/full-system-render.png" class="sw-visualise-image" alt="Zone Refiner Station">
+                <div class="project-overlay">
+                    <h3>Robotic Palletizer</h3>
+                    <p>PLC and robot motion design project, including the incorportion of redundant safety PLC systems to meet rigorous safety standards.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -287,7 +303,7 @@
                         <img src="images/wifi-weather-station/wifi_weather_station_webpage.png" class="popup-image side-by-side-image" alt="Radar Testing Plot">
                     </div>
                    
-                </div>
+                </div>                        
             </section>
 
             <section class="popup-section">
@@ -304,6 +320,97 @@
 
         <!-- Close Button -->
         <button class="close-btn" onclick="closePopup('wifi-weather-station-popup')">Close</button>
+    </div>
+</div>
+
+<div id="zone-refiner-station-popup" class="popup">
+    <div class="popup-content">
+        <!-- Background Image -->
+        <div class="popup-header">
+            <h2>Zone Refiner Station</h2>
+        </div>
+
+        <!-- Sections -->
+        <div class="popup-body">
+            <section class="popup-section">
+                <h3>The Demand</h3>
+                <p>Our client requires purification of rare earth metals using an extremely slow and accurate process called Zone Refining. </p>
+                <p>Previous stations required manual tuning of the heaters to keep the metal zones in the right state, which was difficult to ensure across a seven day process.</p>
+            </section>
+  
+            <section class="popup-section">
+                <h3>Challenge</h3>
+                <p>To design and commision multiple fully automated zone refining stations using temperature monitoring and PID control, controlled by a central PLC and HMI panel capable of seamlessly operating up to 10 stations.</p>
+            </section>
+
+            <section class="popup-section">
+                <h3>Solution</h3>
+                <p>A custom weather station was developed utilising a tip bucket rain gauge design, paired with an esp32 module. The design utilises the onboard hall effect sensor for bucket tip detection, along with the onboard wifi module for reporting the data to a firebase database.</p>
+                <p>The design utilises an extremely small 150mW solar panel, which integrates cleanly with the design. In order to sustain its battery level with such low input power, the module utilises esp32's low power subprocessor for registering bucket tips, while waking up once per hour to upload to the database. During periods of extended lack of sunlight when the battery level becomes depleted, the module stores the data in flash until the battery level restabilises, and the data is bulk uploaded to the database. In this mode, the weather station can last 200 days off a single 18650 battery.</p>
+                <img src="images/zone-refiner-station/client-hmi-preview.jpg" class="popup-image outdoor-image" alt="PLC HMI demonstatration">
+     
+            </section>
+
+            <section class="popup-section">
+                <h3>Key Skills</h3>
+                <ul class="skills-list">
+                    <li>Kicad PCB Design</li>
+                    <li>Solar Power Management</li>
+                    <li>Webpage Development</li>
+                    <li>Assembly Programming</li>
+                    <li>Database Management</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePopup('zone-refiner-station-popup')">Close</button>
+    </div>
+</div>
+
+<div id="robotic-palletizer-popup" class="popup">
+    <div class="popup-content">
+        <!-- Background Image -->
+        <div class="popup-header">
+            <h2>Robotic Palletizer</h2>
+        </div>
+
+        <!-- Sections -->
+        <div class="popup-body">
+            <section class="popup-section">
+                <h3>The Demand</h3>
+                <p>Our client requires purification of rare earth metals using an extremely slow and accurate process called Zone Refining. </p>
+                <p>Previous stations required manual tuning of the heaters to keep the metal zones in the right state, which was difficult to ensure across a seven day process.</p>
+            </section>
+  
+            <section class="popup-section">
+                <h3>Challenge</h3>
+                <p>To design and commision multiple fully automated zone refining stations using temperature monitoring and PID control, controlled by a central PLC and HMI panel capable of seamlessly operating up to 10 stations.</p>
+            </section>
+
+            <section class="popup-section">
+                <h3>Solution</h3>
+                <p>A custom weather station was developed utilising a tip bucket rain gauge design, paired with an esp32 module. The design utilises the onboard hall effect sensor for bucket tip detection, along with the onboard wifi module for reporting the data to a firebase database.</p>
+                <p>The design utilises an extremely small 150mW solar panel, which integrates cleanly with the design. In order to sustain its battery level with such low input power, the module utilises esp32's low power subprocessor for registering bucket tips, while waking up once per hour to upload to the database. During periods of extended lack of sunlight when the battery level becomes depleted, the module stores the data in flash until the battery level restabilises, and the data is bulk uploaded to the database. In this mode, the weather station can last 200 days off a single 18650 battery.</p>
+                <img src="images/robotic-palletizer/full-system-with-me.jpg" class="popup-image outdoor-image" alt="Man standing in front of Robotic Palletizer System">
+                <img src="images/robotic-palletizer/robot-pov.jpg" class="popup-image outdoor-image" alt="Robotic Bag Palletizer">
+                
+            </section>
+
+            <section class="popup-section">
+                <h3>Key Skills</h3>
+                <ul class="skills-list">
+                    <li>Kicad PCB Design</li>
+                    <li>Solar Power Management</li>
+                    <li>Webpage Development</li>
+                    <li>Assembly Programming</li>
+                    <li>Database Management</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePopup('zone-refiner-station-popup')">Close</button>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
