@@ -337,8 +337,17 @@ body.no-scroll {
 }
 
 .sw-visualise-image {
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  /* Webkit support for Safari and older browsers */
+  -webkit-mask-image: 
+    linear-gradient(to bottom, transparent, black 10%, black 90%, transparent),
+    linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: destination-in; /* Essential for WebKit */
+
+  /* Standard modern syntax */
+  mask-image: 
+    linear-gradient(to bottom, transparent, black 10%, black 90%, transparent),
+    linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect; 
 }
 
 .xray-container {
@@ -375,7 +384,7 @@ body.no-scroll {
 .touch-device .xray-container {
     position: relative;
 }
-    
+
 .touch-device .xray-container::before {
     content: "Tap to see internals";
     position: absolute;
@@ -481,4 +490,5 @@ body.no-scroll {
     text-align: center;
     font-size: 16px;
     margin-top: 10px;
+    border-radius: 5px;
 }
